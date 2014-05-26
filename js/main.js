@@ -32,4 +32,3 @@ var paramsToQueryString = function(params, url) {
         return queryString;
 };
 
-console.log(paramsToQueryString(paramsFromQueryString()));
