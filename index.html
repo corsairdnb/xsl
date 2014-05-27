@@ -8,19 +8,94 @@
 </head>
 <body>
 
-<form class="form">
-    <div class="form__cols">
+<div class="wrapper">
+
+    <h1>Please, enter two sets of parameters</h1>
+
+    <form class="form">
         <label class="form__label">
-            Set 1
             <textarea placeholder="Paste set of parameters here..." class="form__textarea form__textarea_1"></textarea>
         </label>
         <label class="form__label">
-            Set 2
             <textarea placeholder="Paste set of parameters here..." class="form__textarea form__textarea_2"></textarea>
         </label>
+    </form>
+
+    <div class="settings">
+        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_left">
+        <label class="settings__label" for="settings__checkbox_left">Show unique on left</label>
+        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_equal">
+        <label class="settings__label" for="settings__checkbox_equal">Show equal</label>
+        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_diff" checked>
+        <label class="settings__label" for="settings__checkbox_diff">Show different</label>
+        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_right">
+        <label class="settings__label" for="settings__checkbox_right">Show unique on right</label>
     </div>
-    <!--<input type="submit" value="Compare" class="form__submit">-->
-</form>
+
+    <div class="result">
+        <div class="result__item">
+            <div class="result__item-block result__item-left result__item-unique">
+                <div class="result__item-name">param1</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name"></div>
+                <div class="result__item-value"></div>
+            </div>
+        </div>
+        <div class="result__item">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name"></div>
+                <div class="result__item-value"></div>
+            </div>
+            <div class="result__item-block result__item-right result__item-unique">
+                <div class="result__item-name">param2</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+        </div>
+        <div class="result__item result__item_equal">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name">param0</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name">param0</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+        </div>
+        <div class="result__item result__item_equal">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name">param1</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name">param1</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+        </div>
+        <div class="result__item result__item_diff">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name">param2</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name">param2</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+        </div>
+        <div class="result__item result__item_diff">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name">param3</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name">param3</div>
+                <div class="result__item-value">some value of param</div>
+            </div>
+        </div>
+    </div>
+
+</div>
 
 </body>
 </html>
