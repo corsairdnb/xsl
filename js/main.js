@@ -8,7 +8,8 @@ var paramsFromQueryString = function(str) {
         searchStringArray,
         searchStringParams = {};
     if (!str || typeof str === "undefined")
-        searchString = location.search.substr(1);
+        searchString = location.search;
+    searchString = searchString.substr(1);
     if (searchString=="") throw new Error("query string is empty");
     searchStringArray = searchString.split("&");
     for (var i in searchStringArray) {
