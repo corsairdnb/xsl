@@ -101,5 +101,81 @@
 
 </div>
 
+<script type="text/template" id="template-diff">
+    <%
+    _.each(items,function(value, key, list){
+    %>
+        <div class="result__item result__item_diff">
+            <div class="result__item-block result__item-left">
+                <div class="result__item-name"><%- key %></div>
+                <div class="result__item-value"><%- list[key][0] %></div>
+            </div>
+            <div class="result__item-block result__item-right">
+                <div class="result__item-name"><%- key %></div>
+                <div class="result__item-value"><%- list[key][1] %></div>
+            </div>
+        </div>
+    <%
+    });
+    %>
+</script>
+
+<script type="text/template" id="template-equal">
+    <%
+    _.each(items,function(value, key, list){
+    %>
+    <div class="result__item result__item_equal">
+        <div class="result__item-block result__item-left">
+            <div class="result__item-name"><%- key %></div>
+            <div class="result__item-value"><%- value %></div>
+        </div>
+        <div class="result__item-block result__item-right">
+            <div class="result__item-name"><%- key %></div>
+            <div class="result__item-value"><%- value %></div>
+        </div>
+    </div>
+    <%
+    });
+    %>
+</script>
+
+<script type="text/template" id="template-unique-left">
+    <%
+    _.each(items,function(value, key){
+    %>
+    <div class="result__item">
+        <div class="result__item-block result__item-left result__item-unique">
+            <div class="result__item-name"><%- key %></div>
+            <div class="result__item-value"><%- value %></div>
+        </div>
+        <div class="result__item-block result__item-right">
+            <div class="result__item-name"></div>
+            <div class="result__item-value"></div>
+        </div>
+    </div>
+    <%
+    });
+    %>
+</script>
+
+<script type="text/template" id="template-unique-right">
+    <%
+    _.each(items,function(value, key){
+    %>
+    <div class="result__item">
+        <div class="result__item-block result__item-left">
+            <div class="result__item-name"></div>
+            <div class="result__item-value"></div>
+        </div>
+        <div class="result__item-block result__item-right result__item-unique">
+            <div class="result__item-name"><%- key %></div>
+            <div class="result__item-value"><%- value %></div>
+        </div>
+    </div>
+    <%
+    });
+    %>
+</script>
+
 </body>
 </html>
