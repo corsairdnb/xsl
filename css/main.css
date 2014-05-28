@@ -10,6 +10,7 @@ body {
     min-width: 640px;
     font: 18px/18px sans-serif;
     background: #f1f5f7;
+    color: #333;
 }
 .wrapper {
     width: 640px;
@@ -28,6 +29,7 @@ h1 {
     text-align: center;
     color: #B3C1C8;
     font-size: 35px;
+    text-shadow: 0 1px 0 #fff;
 }
 .form {
     width: 100%;
@@ -48,7 +50,7 @@ h1 {
     border: 1px solid;
     border-color: #cdcdcd #b7b7b7 #afafaf;
     border-radius: 3px;
-    box-shadow: none;
+    box-shadow: 0 1px 4px -4px #000;
     overflow: auto;
 }
 .form__textarea:focus {
@@ -136,6 +138,7 @@ h1 {
 }
 .result__item-name {
     flex: 1 0 0;
+    color: #888;
 }
 .result__item-value {
     flex: 2 0 0;
