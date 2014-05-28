@@ -30,89 +30,27 @@
         <label class="settings__label" for="settings__checkbox_left">Show unique on left</label>
         <input type="checkbox" class="settings__checkbox" id="settings__checkbox_equal">
         <label class="settings__label" for="settings__checkbox_equal">Show equal</label>
-        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_diff">
+        <input type="checkbox" class="settings__checkbox" id="settings__checkbox_diff" checked>
         <label class="settings__label" for="settings__checkbox_diff">Show different</label>
         <input type="checkbox" class="settings__checkbox" id="settings__checkbox_right">
         <label class="settings__label" for="settings__checkbox_right">Show unique on right</label>
     </div>
 
-    <div class="result">
-        <!--<div class="result__item">
-            <div class="result__item-block result__item-left result__item-unique">
-                <div class="result__item-name">param1</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name"></div>
-                <div class="result__item-value"></div>
-            </div>
-        </div>
-        <div class="result__item">
-            <div class="result__item-block result__item-left">
-                <div class="result__item-name"></div>
-                <div class="result__item-value"></div>
-            </div>
-            <div class="result__item-block result__item-right result__item-unique">
-                <div class="result__item-name">param2</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-        </div>
-        <div class="result__item result__item_equal">
-            <div class="result__item-block result__item-left">
-                <div class="result__item-name">param0</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name">param0</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-        </div>
-        <div class="result__item result__item_equal">
-            <div class="result__item-block result__item-left">
-                <div class="result__item-name">param1</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name">param1</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-        </div>
-        <div class="result__item result__item_diff">
-            <div class="result__item-block result__item-left">
-                <div class="result__item-name">param2</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name">param2</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-        </div>
-        <div class="result__item result__item_diff">
-            <div class="result__item-block result__item-left">
-                <div class="result__item-name">param3</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name">param3</div>
-                <div class="result__item-value">some value of param</div>
-            </div>
-        </div>-->
-    </div>
+    <div class="result"></div>
+
+    <div class="tip"><b>Tip:</b> input formats are <code>?param1=1&amp;param2=2</code> or <code>{"param1":"1","param2":"2"}</code></div>
 
 </div>
 
 <script type="text/template" id="template-diff">
+    <h2>Different parameters</h2>
     <%
     _.each(items,function(value, key, list){
     %>
         <div class="result__item result__item_diff">
-            <div class="result__item-block result__item-left">
+            <div class="result__item-block">
                 <div class="result__item-name"><%- key %></div>
                 <div class="result__item-value"><%- list[key][0] %></div>
-            </div>
-            <div class="result__item-block result__item-right">
-                <div class="result__item-name"><%- key %></div>
-                <div class="result__item-value"><%- list[key][1] %></div>
             </div>
         </div>
     <%
@@ -121,15 +59,12 @@
 </script>
 
 <script type="text/template" id="template-equal">
+    <h2>Equal parameters</h2>
     <%
     _.each(items,function(value, key, list){
     %>
     <div class="result__item result__item_equal">
-        <div class="result__item-block result__item-left">
-            <div class="result__item-name"><%- key %></div>
-            <div class="result__item-value"><%- value %></div>
-        </div>
-        <div class="result__item-block result__item-right">
+        <div class="result__item-block result__item-center">
             <div class="result__item-name"><%- key %></div>
             <div class="result__item-value"><%- value %></div>
         </div>
@@ -140,17 +75,14 @@
 </script>
 
 <script type="text/template" id="template-unique-left">
+    <h2>Unique parameters on left</h2>
     <%
     _.each(items,function(value, key){
     %>
     <div class="result__item">
-        <div class="result__item-block result__item-left result__item-unique">
+        <div class="result__item-block result__item-unique">
             <div class="result__item-name"><%- key %></div>
             <div class="result__item-value"><%- value %></div>
-        </div>
-        <div class="result__item-block result__item-right">
-            <div class="result__item-name"></div>
-            <div class="result__item-value"></div>
         </div>
     </div>
     <%
@@ -159,15 +91,12 @@
 </script>
 
 <script type="text/template" id="template-unique-right">
+    <h2>Unique parameters on right</h2>
     <%
     _.each(items,function(value, key){
     %>
     <div class="result__item">
-        <div class="result__item-block result__item-left">
-            <div class="result__item-name"></div>
-            <div class="result__item-value"></div>
-        </div>
-        <div class="result__item-block result__item-right result__item-unique">
+        <div class="result__item-block result__item-unique">
             <div class="result__item-name"><%- key %></div>
             <div class="result__item-value"><%- value %></div>
         </div>

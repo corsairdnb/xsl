@@ -31,6 +31,12 @@ h1 {
     font-size: 35px;
     text-shadow: 0 1px 0 #fff;
 }
+h2 {
+    font-size: 20px;
+    color: #B3C1C8;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+}
 .form {
     width: 100%;
     display: flex;
@@ -52,6 +58,7 @@ h1 {
     border-radius: 3px;
     box-shadow: 0 1px 4px -4px #000;
     overflow: auto;
+    outline: none;
 }
 .form__textarea:focus {
     border-color: #85b7ce;
@@ -77,7 +84,6 @@ h1 {
 .settings__checkbox:checked + .settings__label { background: #83B4CF; }
 .settings__checkbox:checked + .settings__label:hover { background: #9bbcce; }
 
-
 #settings__checkbox_equal + .settings__label:hover { background: #abeb70; }
 #settings__checkbox_equal:checked + .settings__label { background: #98e156; }
 #settings__checkbox_equal:checked + .settings__label:hover { background: #b4d993; }
@@ -96,24 +102,21 @@ h1 {
 .result__item {
     background: #fff;
     display: flex;
-}
-.result__item:last-child {
     box-shadow: 0 2px 4px -4px #000;
+    border-bottom: 1px solid #fff;
 }
-.result__item-left, .result__item-right {
+.result__item-block {
+    border-color: #83B4CF;
+    border-style: solid;
+    border-width: 1px 10px 0;
     display: flex;
     flex: 1 0 0;
-    padding: 8px 10px;
-    border-top: 1px solid #eee;
 }
-.result__item-left {
-    border-left: 10px solid #eee;
-}
-.result__item-right {
-    border-right: 10px solid #eee;
+.result__item-center {
+
 }
 .result__item-unique {
-    border-color: #83B4CF;
+
 }
 .result__item_equal > .result__item-block {
     border-color: #98e156;
@@ -131,7 +134,7 @@ h1 {
     background: #ffefef;
 }
 .result__item-name, .result__item-value {
-    padding: 0 10px 0 0;
+    padding: 8px 10px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -139,7 +142,23 @@ h1 {
 .result__item-name {
     flex: 1 0 0;
     color: #888;
+    border-right: 1px solid #e6e6e6;
+    background: linear-gradient(to bottom, #fff, #f1f1f1);
+    position: relative;
 }
 .result__item-value {
-    flex: 2 0 0;
+    flex: 3 0 0;
+}
+
+.tip {
+    flex: .3 0 0;
+    margin: 20px 0 0;
+    font-size: 12px;
+    font-style: italic;
+    color: #999;
+    text-align: center;
+}
+.tip > code {
+    font-style: normal;
+    color: #666;
 }
