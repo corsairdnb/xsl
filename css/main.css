@@ -23,6 +23,7 @@ body {
 }
 h1 {
     flex: 0 0 18px;
+    margin: 10px 0;
     white-space: nowrap;
     text-align: center;
     color: #B3C1C8;
@@ -47,6 +48,7 @@ h1 {
     border: 1px solid;
     border-color: #cdcdcd #b7b7b7 #afafaf;
     border-radius: 3px;
+    box-shadow: none;
     overflow: auto;
 }
 .form__textarea:focus {
@@ -92,6 +94,9 @@ h1 {
 .result__item {
     background: #fff;
     display: flex;
+}
+.result__item:last-child {
+    box-shadow: 0 2px 4px -4px #000;
 }
 .result__item-left, .result__item-right {
     display: flex;
