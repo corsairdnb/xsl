@@ -108,16 +108,14 @@ h2 {
 .result__item-block {
     border-color: #83B4CF;
     border-style: solid;
-    border-width: 1px 10px 0;
+    border-width: 1px 0 0;
     display: flex;
     flex: 1 0 0;
 }
-.result__item-center {
-
+.result__item-block:first-child {
+    border-left-width: 10px;
 }
-.result__item-unique {
-
-}
+.result__item-unique {}
 .result__item_equal > .result__item-block {
     border-color: #98e156;
 }
