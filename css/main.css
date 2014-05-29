@@ -140,12 +140,15 @@ h2 {
 .result__item-name {
     flex: 1 0 0;
     color: #888;
-    border-right: 1px solid #e6e6e6;
+    border-right: 1px solid #e0e0e0;
     background: linear-gradient(to bottom, #fff, #f1f1f1);
     position: relative;
 }
 .result__item-value {
     flex: 3 0 0;
+}
+.result__item-value + .result__item-value {
+    border-left: 1px solid #e0e0e0;
 }
 
 .tip {
