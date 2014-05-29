@@ -1,7 +1,13 @@
-xsl
+XSL School
 ===
 
-Test job for Yandex.Money
+Решение задач 1,2,3: http://corsairdnb.github.io/xsl/
+Решение задачи 4: http://corsairdnb.github.io/xsl/1.html
+Решение задачи 5: http://corsairdnb.github.io/xsl/2.html
+Решение задачи 6: http://corsairdnb.github.io/xsl/3.html
+
+Задание
+====
 
 1. Напишите функцию разбора query-строки в набор параметров.
 2. Допустим, параметры http-запроса хранятся как свойства объекта. Напишите функцию сериализации параметров в query-строку с добавлением к произвольному url.
